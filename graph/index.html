@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lickit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .navbar-links a:hover {
+            color: #28a745;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f1f3f4;
+            border-radius: 20px;
+            padding: 10px 15px;
+            width: 600px;
+            
+        }
+
+        .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+        .search-bar i {
+            border-radius: 50%;
+            padding: 15px;
+            background-color: #0056b3;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .upload-form input[type="file"],
+        .upload-form textarea,
+        .upload-form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .upload-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .upload-form button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .upload-form button:hover {
+            background: #218838;
+        }
+
+        .document-list {
+            margin-top: 30px;
+        }
+
+        .document-item {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .document-item h3 {
+            margin: 0;
+        }
+
+        .document-item p {
+            margin: 5px 0;
+        }
+
+        .document-item button {
+            align-self: flex-start;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .document-item button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f3f4;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="https://via.placeholder.com/40" alt="Logo">
+            <h2>Lickit</h2>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Assignments...">
+            <i class="ri-menu-search-line"></i>
+        </div>
+        <div class="navbar-links">
+            <a href="#">My Profile</a>
+            <a href="#">Categories</a>
+            <a href="#">Help</a>
+            <a href="#">Shop</a>
+            <div class="cart-icon">
+                <i class="ri-shopping-cart-2-line"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Upload Your Document</h2>
+        <form class="upload-form">
+            <input type="file" name="document" accept=".pdf,.doc,.docx" required>
+            <textarea name="description" placeholder="Describe your document and what kind of help you need..." required></textarea>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="document-list">
+            <h2>Documents Shared by Others</h2>
+
+            <div class="document-item">
+                <h3>Project Proposal</h3>
+                <p>Description: Need help with editing and formatting this project proposal.</p>
+                <button>Help with this document</button>
+            </div>
+
+            <div class="document-item">
+                <h3>Research Paper Draft</h3>
+                <p>Description: Looking for feedback on content and structure.</p>
+                <button>Help with this document</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Blinkit. All rights reserved.</p>
+    </div>
+</body>
+</html>
